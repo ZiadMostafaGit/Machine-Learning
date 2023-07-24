@@ -4,7 +4,9 @@ import matplotlib.pyplot as plt
 from lab_utils_uni import plt_intuition, plt_stationary, plt_update_onclick, soup_bowl
 
 plt.style.use('./deeplearning.mplstyle')
+
 #the sits
+
 x_train = np.array([1.0, 1.7, 2.0, 2.5, 3.0, 3.2])
 y_train = np.array([250, 300, 480,  430,   630, 730])
 
@@ -20,7 +22,6 @@ def cost_function(x, y, w, b):
         cost_res += cost
     total_cost = (1/(2*m)*cost_res)
     return total_cost
-
 
 plt_intuition(x_train, y_train)
 plt.close('all')
