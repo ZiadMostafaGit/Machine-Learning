@@ -23,10 +23,11 @@ def cost_function(x, y, w, b):
     total_cost = (1/(2*m)*cost_res)
     return total_cost
 
-plt_intuition(x_train, y_train)
-plt.close('all')
-fig, ax, dyn_items = plt_stationary(x_train, y_train)
 
-updater = plt_update_onclick(fig, ax, x_train, y_train, dyn_items)
+# plt_intuition(x_train, y_train)
+# plt.close('all')
+# fig, ax, dyn_items = plt_stationary(x_train, y_train)
 
-soup_bowl()
+# updater = plt_update_onclick(fig, ax, x_train, y_train, dyn_items)
+
+# soup_bowl()
