@@ -1,0 +1,20 @@
+Transaction Date,Segment,Product Name,Sales,Profit
+2/8/2022,Consumer,Laptop,12,2
+2/11/2022,Consumer,Keyboard,7,5
+3/3/2022,Corporate,Mouse,13,0
+3/8/2022,Consumer,Keyboard,60,5
+4/2/2022,Corporate,Laptop,10,
+4/2/2022,Consumer,Mic,,-5
+4/8/2022,Consumer,Laptop,5,1
+4/16/2022,Corporate,Camera,5,1
+4/16/2022,Corporate,Camera,5,1
+5/3/2022,Corporate,Camera,4,0
+6/8/2022,Consumer,Camera,,-5
+6/13/2022,Consumer,Mic,,-7
+6/17/2022,Consumer,Camera,5,1
+9/3/2022,Corporate,Camera,5,1
+9/3/2022,Corporate,Keyboard,7,2
+9/3/2022,Consumer,Laptop,8,
+10/1/2022,Corporate,Camera,4,0
+11/12/2022,Consumer,Mic,2,-1
+5/3/2022,Corporate,Camera,4,0
