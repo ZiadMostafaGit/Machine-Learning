@@ -1,5 +1,3 @@
-Sure! Let's go through a complete example of linear regression using gradient descent, covering every step in detail. We will use a small dataset for simplicity and perform linear regression to fit a line \( y = mx + c \).
-
 ### Example Dataset
 
 | Input (x) | Output (y) |
@@ -144,9 +142,7 @@ We repeat these steps for more iterations. Here, we'll demonstrate a few more it
    \frac{\partial \text{Cost}}{\partial m} = -\frac{2}{5} [1.056 + 2.616 + 7.68 + 15.248 + 35.32] = -\frac{2}{5} \cdot 61.92 = -24.768
    \]
    \[
-   \frac{\partial \text{Cost}}{\partial c} = -\frac{2}{5} [
-
-1.056 + 1.308 + 2.56 + 3.812 + 7.064] = -\frac{2}{5} \cdot 15.8 = -6.32
+   \frac{\partial \text{Cost}}{\partial c} = -\frac{2}{5} [1.056 + 1.308 + 2.56 + 3.812 + 7.064] = -\frac{2}{5} \cdot 15.8 = -6.32
    \]
 
 #### Update Parameters
