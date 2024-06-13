@@ -1,0 +1,54 @@
+P3
+About visualization!
+- The iterations vs cost is healthy if cost kept decreasing
+- If suddenly increasing or weird behaviour, something is wrong
+	- Consider the learning rate value
+- If it almost doesn't change at some point, then iterating more doesn't help
+
+====================
+
+P2 / P4
+- With a very small learning rate (e.g. 0.0000001), the weights almost don't change
+- If the learning rate is smaller than precision, in this dataset we ends in a few steps
+- With a fair LR and a very small precision (e.g. 0.00001), the problem will finish all iterations, as such accuracy is hard to achieve
+- Using a big precision (e.g. 0.1) is typically wrong as you might stop so early
+- LR=0.01 and precision=0.0001 seems are a good combination for high accuracy and early termination
+- In practice, precision is an easy hyperparameter. LR is more tricker with 0.01 and 0.001 are strong initial values
+
+- Without preprocessing, the weights shrink/grow so large: nan/inf/-inf
+
+- Using standardizing, we notice the program can end faster with LR=0.01 and precision=0.0001
+- But be careful, we CAN'T compare the MSE error of scaling with standardizing
+
+- However, once computing the predicted outputs in the original ranges, we can compare them
+- Observe the scaled data performed better than the standardized one!
+
+====================
+P5
+
+- When we plot each feature against the target, visually seems the first feature only
+coming from a line.
+- Using only the same feature, we reach the same performance with less memory/time
+
+====================
+P6
+
+About normal equations:
+
+- https://www.quora.com/Why-is-feature-scaling-not-necessary-if-using-a-normal-equation-method-compared-to-when-its-necessary-using-the-gradient-descent-methodS
+- Feature scaling is not required when we use the normal equation approach
+- As a closed formula (no learning), no need for such step!
+
+- Feature scaling makes all features has a similar range of values
+- Then steps for gradient descent are updated at the SAME rate for all the features
+- Also, this plays a role in well-established initalization techniques for the intial state
+- This all assure smooth movements, as otherwise GD is sensetive to data ranges
+
+-  If you perform gradient descent, you are using an iterative approach to find the solution and the convergence is 
+		very heavily affected by the shape of objective function
+
+- Observe how the performance of non-scaled normal equations is even better than scaled one
+	- Mathematically, scaled vs non-scaled normal equations are computations on different data
+	- In practice, you need to try both ways to see which is better
+	- Always start with preprocessed data
+
