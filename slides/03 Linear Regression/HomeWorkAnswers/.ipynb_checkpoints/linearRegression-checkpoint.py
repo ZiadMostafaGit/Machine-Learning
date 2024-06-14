@@ -40,24 +40,44 @@ def caleDrivateve(x,t,weight):
             
 
 
-def LinearRegressionGradientDescent(x,t,inital_start, step_size = 0.001, precision = 0.00001, max_iter = 1000):
+
+def gradient_descent(caleDrivateve, inital_start,t,weight, step_size = 0.001, precision = 0.00001, max_iter = 1000):
     cur_start = np.array(inital_start)
     last_start = cur_start + 100 * precision    # something different
-    # start_list = [cur_start]
+    start_list = [cur_start]
 
     iter = 0
     while norm(cur_start - last_start) > precision and iter < max_iter:
-        print(costFunction(x,t,cur_start),end=" ")
         print(cur_start)
         last_start = cur_start.copy()     # must copy
 
-        gradient = caleDrivateve(x,t,cur_start)
+        gradient = caleDrivateve(cur_start,t,weight)
         cur_start -= gradient * step_size   # move in opposite direction
 
-        # start_list.append(cur_start)
+        start_list.append(cur_start)
         iter += 1
 
     return cur_start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -66,6 +86,7 @@ X = np.array([0, 0.2, 0.4, 0.8, 1.0])
 t = 5 + X  # Output linear, no noise
 X = X.reshape((-1, 1))  # let's reshape in 2
 X = np.hstack([np.ones((X.shape[0], 1)), X])
-weight = np.array([1.0, 1.0])
-res=LinearRegressionGradientDescent(X,t,weight)
-print(res)
+weight = np.array([1.0, 1.0])  
+cost = costFunction(X, t, weight)
+print(cost)
+print(caleDrivateve(X,t,weight))
